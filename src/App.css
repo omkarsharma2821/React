@@ -5,6 +5,7 @@
 }
 .bg{
   background-image: url(img3.png);
+  background: cover;
 }
 .color{
   background-color: black;

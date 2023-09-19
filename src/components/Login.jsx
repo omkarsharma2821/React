@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const LoginSchema = Yup.object().shape({
@@ -18,8 +19,36 @@ const Login = () => {
       password: "",
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       console.log(values);
+ 
+       const res = await fetch('http://localhost:5000/user/authenticate', {
+        method : 'POST',
+        body : JSON.stringify(values),
+        headers : {
+          'Content-Type' : 'application/json'
+        }
+       })
+       console.log(res.status);
+       if(res.status === 200)
+       {
+        Swal.fire({
+          icon : 'success',
+          title : 'Login success'
+        })
+       } else if(res.status === 400){
+        Swal.fire({
+          icon : 'error',
+          title : 'Login Failed',
+          text : 'Email or Password is inavalid'
+        })
+       } else{
+        Swal.fire({
+          icon : 'error',
+          title : 'Error',
+          text : 'Something went wrong'
+        })
+       }
       resetForm();
       // send values to backened.
     },

@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const SignupSchema = Yup.object().shape({
@@ -21,6 +22,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Signup = () => {
+  const navigate = useNavigate()
   // initialize formik
   const signupForm = useFormik({
     initialValues: {
@@ -30,11 +32,11 @@ const Signup = () => {
       phone: "",
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       console.log(values);
       resetForm();
 
-      fetch('http://localhost:5000/user/add',{
+      const res = await fetch('http://localhost:5000/user/add',{
         method : 'POST',
         body: JSON.stringify(values),         //here all the things are case senstive in fetch.
         headers: {
@@ -42,6 +44,21 @@ const Signup = () => {
         }
 
       })
+      console.log(res)
+      if(res.status===200){
+      Swal.fire({
+    icon: 'success',
+    title: 'Registered Successfully',
+    text: 'Login to Continue'
+  })
+  navigate('/login');
+}else{
+    Swal.fire({
+      icon: 'error',
+      title : 'Error',
+      text : 'Something went wrong'
+    })
+  }
       // send values to backened.
     },
     validationSchema: SignupSchema,
