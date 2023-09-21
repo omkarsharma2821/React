@@ -13,8 +13,11 @@ import Chat from './components/Chat';
 import ProductList from './components/ProductList';
 import Chatting from './components/Chat_sir';
 import Contact from './components/Contact';
+import { useState } from 'react';
 
 function App() {
+  let cartitems = 20; //props means property. advantage of global variable is that it can be change 
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div>
       {/* <h1>My react tab</h1> */}
@@ -23,10 +26,10 @@ function App() {
         {/* rouetes mtlb address create krna */}
         {/* <Link to ="/login">Login</Link> */}
         {/* <Link to ="/signup">Signup</Link> */}
-        <Navbar />
+        <Navbar mycart={cartitems} loggedIn={loggedIn} setLoggedIn = {setLoggedIn}/>
          <Routes> 
             <Route path= "/" element= {<Home />}/>
-            <Route path= "/login" element= {<Login />}/>
+            <Route path= "/login" element= {<Login setLoggedIn = {setLoggedIn} />}/>
             <Route path= "/signup" element= {<Signup />}/>
             <Route path= "/event" element= {<EventHandling />}/>
             <Route path= "/state" element= {<StateManagement />}/>

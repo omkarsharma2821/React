@@ -1,7 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({mycart, loggedIn, setLoggedIn}) => {
+  console.log(mycart);
+
+  const showLoginOptions = () => {
+  if (loggedIn){
+    return ( <li className="nav-item">
+    <button className="btn btn-danger" onClick={() => {setLoggedIn(false)}}>Logout</button>
+    </li>
+    )
+  }
+}
   return (
     <nav className=" navbar navbar-expand-lg bg-body-secondary text-dark">
     {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
@@ -62,6 +72,10 @@ const Navbar = () => {
                 ContactUs
               </NavLink>
             </li>
+            <li className="nav-item">
+              <h4>Cart Items : {mycart}</h4>
+            </li>
+            {showLoginOptions()}
           </ul>
           <button className="d-flex px-4 btn btn-outline-primary me-2 active">
             <NavLink className="nav-link" to="/login">

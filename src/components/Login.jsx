@@ -12,7 +12,7 @@ const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email("Invalid email").required("Required"),
 });
-const Login = () => {
+const Login = ({setLoggedIn}) => {
   const loginForm = useFormik({
     initialValues: {
       email: "",
@@ -36,6 +36,7 @@ const Login = () => {
           icon : 'success',
           title : 'Login success'
         })
+        setLoggedIn(true);
        } else if(res.status === 400){
         Swal.fire({
           icon : 'error',
