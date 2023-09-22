@@ -24,7 +24,7 @@ function App() {
       {/* <h1>My react tab</h1> */}
 
         <BrowserRouter>
-        <AppProvider>
+        <AppProvider> 
         {/* rouetes mtlb address create krna */}
         {/* <Link to ="/login">Login</Link> */}
         {/* <Link to ="/signup">Signup</Link> */}
