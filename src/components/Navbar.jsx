@@ -2,21 +2,23 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import useAppContext from "../AppContext";
 
-const Navbar = ({mycart}) => {
-
-  const {loggedIn, setLoggedIn, logout} = useAppContext();
+const Navbar = ({ mycart }) => {
+  const { loggedIn, setLoggedIn, logout } = useAppContext();
 
   const showLoginOptions = () => {
-  if (loggedIn){
-    return ( <li className="nav-item">
-    <button className="btn btn-danger" onClick={logout}>Logout</button>
-    </li>
-    )
-  }
-}
+    if (loggedIn) {
+      return (
+        <li className="nav-item">
+          <button className="btn btn-danger" onClick={logout}>
+            Logout
+          </button>
+        </li>
+      );
+    }
+  };
   return (
     <nav className=" navbar navbar-expand-lg bg-body-secondary text-dark">
-    {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
+      {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           Navbar
@@ -74,9 +76,7 @@ const Navbar = ({mycart}) => {
                 ContactUs
               </NavLink>
             </li>
-            <li className="nav-item">
-              {/* <h4>Cart Items : {mycart}</h4> */}
-            </li>
+            <li className="nav-item">{/* <h4>Cart Items : {mycart}</h4> */}</li>
             {showLoginOptions()}
           </ul>
           <button className="d-flex px-4 btn btn-outline-primary me-2 active">
