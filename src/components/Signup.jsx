@@ -132,12 +132,12 @@ const Signup = () => {
                 />
                 <label>Confirm Password</label>
                 <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                  {signupForm.touched.password && signupForm.errors.password}
+                  {signupForm.touched.confirmpassword && signupForm.errors.confirmpassword}
                 </span>
                 <input
-                  id="password"
+                  id="confirm_password"
                   onChange={signupForm.handleChange}
-                  value={signupForm.values.password}
+                  value={signupForm.values.confirmpassword}
                   type="password"
                   className="form-control mt-2 mb-4"
                   placeholder="password"

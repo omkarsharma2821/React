@@ -11,7 +11,7 @@ const LoginSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required"),
 
-  email: Yup.string().email("Invalid email").required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"), 
 });
 const Login = () => {
 
