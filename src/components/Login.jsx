@@ -3,6 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import useAppContext from "../AppContext";
 
 const LoginSchema = Yup.object().shape({
   password: Yup.string()
@@ -12,7 +13,10 @@ const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email("Invalid email").required("Required"),
 });
-const Login = ({setLoggedIn}) => {
+const Login = () => {
+
+  const {setLoggedIn} = useAppContext();
+
   const loginForm = useFormik({
     initialValues: {
       email: "",
