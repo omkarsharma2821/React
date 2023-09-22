@@ -15,8 +15,8 @@ import Chatting from './components/Chat_sir';
 import Contact from './components/Contact';
 import { useState } from 'react';
 import { AppProvider } from './AppContext';
-import UserAuth from './UserAuth';
-
+import UserAuth from './UserAuth';  
+  
 function App() {
   let cartitems = 20; //props means property. advantage of global variable is that it can be change 
   return (
