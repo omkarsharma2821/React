@@ -18,13 +18,41 @@ const UserManager = () => {
         }, [])
         
   return (
-    <div className='='vh-100 bg-body-secondary>
-    <div className="conatiner py-4">
+    <div className= 'vh-100 bg-body-secondary'>
+    <div className="container py-4">
         <h1 className='text-center'>User Manager</h1>
 
-        <table>
-            <thead></thead>
-            <tbody></tbody>
+        <table className='table table-dark'>
+            <thead>
+                <tr>
+                    <th>S. No.</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th colSpan={2} className='text-center'>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    userList.map((user, index) => (
+                        <tr>
+                            <td>{index+1}</td>
+                            <td>{user._id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.password}</td>
+                            <td>
+                                <button className='btn btn-primary'>Edit</button>
+                            </td>
+                            <td>
+                                <button className='btn btn-danger'>Delete</button>
+                            </td>
+                        </tr>
+
+                    ))
+                }
+            </tbody>
         </table>
     </div>
     </div>
