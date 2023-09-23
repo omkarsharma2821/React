@@ -16,6 +16,7 @@ import Contact from "./components/Contact";
 import { useState } from "react";
 import { AppProvider } from "./AppContext";
 import UserAuth from "./UserAuth";
+import UserManager from "./components/UserManager";
 
 function App() {
   let cartitems = 20; //props means property. advantage of global variable is that it can be change
@@ -54,6 +55,7 @@ function App() {
             <Route path="/product" element={<ProductList />} />
             <Route path="/chatting" element={<Chatting />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/usermanager" element={<UserManager />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppProvider>
