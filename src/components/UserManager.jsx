@@ -16,6 +16,15 @@ const UserManager = () => {
             getUserData();
          
         }, [])
+
+        const deleteUser = (id) => {
+            console.log(id);
+            // request to delete
+        const res = await fetch("http://localhost:5000/user/id", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        }
         
   return (
     <div className= 'vh-100 bg-body-secondary'>
@@ -46,7 +55,8 @@ const UserManager = () => {
                                 <button className='btn btn-primary'>Edit</button>
                             </td>
                             <td>
-                                <button className='btn btn-danger'>Delete</button>
+                                <button onClick ={() => deleteUser(user._id)}
+                                 className='btn btn-danger'>Delete</button>
                             </td>
                         </tr>
 
