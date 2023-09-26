@@ -20,10 +20,7 @@ const UserManager = () => {
         const deleteUser = (id) => {
             console.log(id);
             // request to delete
-        const res = await fetch("http://localhost:5000/user/id", {
-        headers: {
-          "Content-Type": "application/json",
-        },
+        
         }
         
   return (

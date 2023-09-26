@@ -11,7 +11,7 @@ const UserAuth = ({children}) => {
     }else{
         Swal.fire({
             icon: 'error',
-            title : 'Not Aloowed',
+            title : 'Not Allowed',
             text : 'You need to login'
         })
         return <Navigate to = '/login' />

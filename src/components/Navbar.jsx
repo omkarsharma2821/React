@@ -21,7 +21,7 @@ const Navbar = ({ mycart }) => {
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Navbar
+          Green Doctor
         </a>
         <button
           className="navbar-toggler"
@@ -41,36 +41,36 @@ const Navbar = ({ mycart }) => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/event">
                 Event Handling
               </NavLink>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/state">
                 State Management
               </NavLink>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/todo">
                 Todo List
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/chat">
-                Chat
+                Expert
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/product">
-                Product List
+                product list
               </NavLink>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/chatting">
                 Chat-sir
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">
                 ContactUs
@@ -78,7 +78,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/usermanager">
-                UserManager
+                View History
               </NavLink>
             </li>
             <li className="nav-item">{/* <h4>Cart Items : {mycart}</h4> */}</li>
