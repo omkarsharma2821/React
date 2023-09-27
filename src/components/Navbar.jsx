@@ -41,36 +41,36 @@ const Navbar = ({ mycart }) => {
                 Home
               </NavLink>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <NavLink className="nav-link" to="/event">
                 Event Handling
               </NavLink>
-            </li> */}
-            {/* <li className="nav-item">
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/state">
                 State Management
               </NavLink>
-            </li> */}
-            {/* <li className="nav-item">
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/todo">
                 Todo List
               </NavLink>
-            </li> */}
+            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/chat">
-                Expert
+                Chat
               </NavLink>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <NavLink className="nav-link" to="/product">
                 product list
               </NavLink>
-            </li> */}
-            {/* <li className="nav-item">
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/chatting">
                 Chat-sir
               </NavLink>
-            </li> */}
+            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">
                 ContactUs
@@ -78,7 +78,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/usermanager">
-                View History
+                User Manager
               </NavLink>
             </li>
             <li className="nav-item">{/* <h4>Cart Items : {mycart}</h4> */}</li>
