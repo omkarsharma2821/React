@@ -17,12 +17,14 @@ import { useState } from "react";
 import { AppProvider } from "./AppContext";
 import UserAuth from "./UserAuth";
 import UserManager from "./components/UserManager";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   let cartitems = 20; //props means property. advantage of global variable is that it can be change
   return (
     <div>
       {/* <h1>My react tab</h1> */}
+      <Toaster position = "top-right"/>
 
       <BrowserRouter>
         <AppProvider>
