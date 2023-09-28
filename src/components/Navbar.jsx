@@ -21,7 +21,7 @@ const Navbar = ({ mycart }) => {
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Green Doctor
+          Navbar
         </a>
         <button
           className="navbar-toggler"
