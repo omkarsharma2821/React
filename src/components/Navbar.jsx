@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAppContext from "../AppContext";
+import useCartContext from "../CartContext";
 
 const Navbar = ({ mycart }) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
+  const {cartitems} = useCartContext();
 
   const showLoginOptions = () => {
     if (loggedIn) {
@@ -81,7 +83,7 @@ const Navbar = ({ mycart }) => {
                 User Manager
               </NavLink>
             </li>
-            <li className="nav-item">{/* <h4>Cart Items : {mycart}</h4> */}</li>
+            <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li>
             {showLoginOptions()}
           </ul>
           <button className="d-flex px-4 btn btn-outline-primary me-2 active">

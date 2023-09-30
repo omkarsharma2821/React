@@ -20,7 +20,7 @@ export const AppProvider = ({children}) => {
         sessionStorage.removeItem('user');
         navigate('/login');
     }
-    return <AppContext.Provider value = {{setLoggedIn, loggedIn, logout}}>
+    return <AppContext.Provider value={{setLoggedIn, loggedIn, logout}}>
         {children}
     </AppContext.Provider>
 } 

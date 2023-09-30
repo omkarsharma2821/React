@@ -19,6 +19,7 @@ import UserAuth from "./UserAuth";
 import UserManager from "./components/UserManager";
 import { Toaster } from "react-hot-toast";
 import UpdateUser from "./components/UpdateUser";
+import { CartProvider } from "./CartContext";
 
 function App() {
   let cartitems = 20; //props means property. advantage of global variable is that it can be change
@@ -29,6 +30,7 @@ function App() {
 
       <BrowserRouter>
         <AppProvider>
+          <CartProvider>
           {/* rouetes mtlb address create krna */}
           {/* <Link to ="/login">Login</Link> */}
           {/* <Link to ="/signup">Signup</Link> */}
@@ -60,8 +62,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/usermanager" element={<UserManager />} />
             <Route path="/updateuser/:id" element={<UpdateUser />} />
+            <Route path="/cart" element={<UpdateUser />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </CartProvider>
         </AppProvider>
       </BrowserRouter>
     </div>
