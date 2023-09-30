@@ -1,5 +1,6 @@
 // context API when thier is nested and no of components are large prop fails. context API is a solution teleport kr deta hai
 // API connect two interfaces.
+// example of rooms inside inside rooms
 
 import { createContext, useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
