@@ -83,6 +83,16 @@ const Navbar = ({ mycart }) => {
                 User Manager
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/CartPage">
+                Cart
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/charts">
+                Using Charts
+              </NavLink>
+            </li>
             <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li>
             {showLoginOptions()}
           </ul>
