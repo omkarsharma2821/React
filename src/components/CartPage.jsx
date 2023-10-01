@@ -3,7 +3,7 @@ import useCartContext from "../CartContext";
 const CartPage = () => {
 const {cartitems, removeItemFromCart} = useCartContext();
 const diaplayCartItems = () =>{
-    if(!cartitems.length) return <h1 className="'text-center display-4 text-muted">
+    if(!cartitems.length) return <h1 className="text-center display-4 text-muted">
         No Items in Cart
     </h1>
     return <table className="table">
