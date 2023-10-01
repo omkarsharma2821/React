@@ -45,17 +45,17 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/event">
-                Event Handling
+                Event-Handling
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/state">
-                State Management
+                State-Management
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/todo">
-                Todo List
+                Todo-List
               </NavLink>
             </li>
             <li className="nav-item">
@@ -65,7 +65,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/product">
-                product list
+                product-list
               </NavLink>
             </li>
             <li className="nav-item">
@@ -80,7 +80,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/usermanager">
-                User Manager
+                User-Manager
               </NavLink>
             </li>
             <li className="nav-item">
@@ -90,7 +90,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/charts">
-                Using Charts
+                Using-Charts
               </NavLink>
             </li>
             <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li>
