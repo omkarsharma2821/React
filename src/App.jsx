@@ -43,28 +43,14 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/event" element={<EventHandling />} />
             <Route path="/state" element={<StateManagement />} />
-            <Route
-              path="/todo"
-              element={
-                <UserAuth>
-                  <Todo />
-                </UserAuth>
-              }
-            />
-            <Route
-              path="/chat"
-              element={
-                <UserAuth>
-                  <Chat />
-                </UserAuth>
-              }
-            />
+            <Route path="/todo" element={<UserAuth> <Todo /> </UserAuth>}/>
+            <Route path="/chat" element={<UserAuth> <Chat /> </UserAuth>}/>
             <Route path="/product" element={<ProductList />} />
             <Route path="/chatting" element={<Chatting />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/usermanager" element={<UserManager />} />
             <Route path="/updateuser/:id" element={<UpdateUser />} />
-            <Route path="/CartPage" element={<CartPage />} />
+            <Route path="/cartpage" element={<CartPage />} />
             <Route path="/charts" element={<UsingCharts />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
