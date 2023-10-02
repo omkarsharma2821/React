@@ -21,7 +21,7 @@ const diaplayCartItems = () => {
                 cartitems.map((item, index) =>(
                         <tr>
                             <td>
-                                <img src={item.image} alt =""/>
+                                <img height={50} src={item.Image} alt =""/>
                             </td>
                             <td>{item.brand}</td>
                             <td>{item.price}</td>
