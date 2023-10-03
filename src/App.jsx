@@ -22,6 +22,7 @@ import UpdateUser from "./components/UpdateUser";
 import { CartProvider } from "./CartContext";
 import CartPage from "./components/CartPage";
 import UsingCharts from "./components/UsingCharts";
+import MemeCreator from "./components/MemeCreator";
 
 function App() {
   let cartitems = 20; //props means property. advantage of global variable is that it can be change
@@ -52,6 +53,7 @@ function App() {
             <Route path="/updateuser/:id" element={<UpdateUser />} />
             <Route path="/cartpage" element={<CartPage />} />
             <Route path="/charts" element={<UsingCharts />} />
+            <Route path="/memecreator" element={<MemeCreator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           </CartProvider>
