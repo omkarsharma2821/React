@@ -80,7 +80,7 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/usermanager">
-                User-Manager
+                UserManager
               </NavLink>
             </li>
             <li className="nav-item">

@@ -17,7 +17,7 @@ const MemeCreator = () => {
     <div className='container'>
         <h1 className='text-center'>Meme Creator</h1>
         <hr />
-        <Stage width={600} height={400}>
+        <Stage width={600} height={300}>
             <Layer>
                 <Rect 
                     x={0}
