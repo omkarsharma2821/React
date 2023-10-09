@@ -12,6 +12,7 @@ const ProductList = () => {
     const search = e.target.value;
     let filteredData = productData.filter((product) => {
       return product.model.toLowerCase().includes(search.toLowerCase());
+    
     });
     setProductsArray(filteredData);
   };
