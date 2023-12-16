@@ -60,7 +60,7 @@ const UserManager = () => {
                             <td>{user.email}</td>
                             <td>{user.password}</td>
                             <td>
-                                <Link to={"/updateuser/"+user._id} className='btn btn-primary'>Edit</Link>
+                                <Link to={"/updateuser/"+user._id} className='btn btn-primary'>update</Link>
                             </td>
                             <td>
                                 <button onClick ={() => deleteUser(user._id)}
